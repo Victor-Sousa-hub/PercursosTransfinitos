@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<title>Pensamentos Trasfinitos</title>
+<body>
+    
+    <div class="lanterna">
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const lanterna = document.querySelector('.lanterna');
+            lanterna.style.left = `${e.clientX}px`;
+            lanterna.style.top = `${e.clientY}px`;
+        });
+    </script>
+    
+    </div>
+    
+    <header class = "header">
+        <div class="header__content">
+            <div class="header__logo-container">
+                <div class="header__logo-img-cont">
+                    <img src="https://i.postimg.cc/mgbtgKCY/profile-removebg-preview-fotor-bg-remover-20240914233317.png" alt=" Logo Image" class="header__logo-img">
+                </div>
+                    <span class="header__logo-sub">Victor Sousa</span>
+            </div>
+            
+            <div class="header__main">
+                <ul class="header__links">
+                <li class="header__link-wrapper">
+                    <a href="{{url_for('main.index')}}" class="header__link"> Home </a>
+                </li>
+                <li class="header__link-wrapper">
+                    <a href="#textos" class="header__link">Textos </a>
+                </li>
+                <li class="header__link-wrapper">
+                    <a href="#projetos" class="header__link"> Projetos </a>
+                </li>
+                <li class="header__link-wrapper">
+                    <a href="#Contato" class="header__link"> Contato </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+
+   
+
+    <section class="home-hero">
+
+        
+
+        <div class="home-hero__content">
+            <h1 class="heading-primary">Bem-vindo</h1>
+            
+            <div class="home-hero__info">
+            <p class="text-primary">Entusiasta em tecnologia com experiência em análise 
+                        de dados e desenvolvimento de projetos web e Python. Atualmente, 
+                    estou explorando a tradução e a criação de projetos em diversas áreas.</p>
+            </div>
+        
+        
+            <div class="home-hero__cta ">
+            <a href="{{ url_for('main.textos') }}" class="btn btn--bg">Textos</a>
+            <a href="{{ url_for('main.projetos') }}" class="btn btn--bg">Projetos</a>             
+            </div>
+    </div>
+</section> 
+
+<section class="projects" id="projetos">
+    {% block content %}
+    <div class="main-conteiner">
+        
+         {% include 'projetos.html' %}
+        
+    </div>
+</section>
+    <div class="main-conteiner">
+        
+        <div id="textos">   {% include 'textos.html' %}</div>
+              
+    </div>
+    {% endblock %}  
+
+</div>  
+    
+    <div>
+    <footer class="footer">
+        <div class="grid-container__footer">
+        <div id="Contato"></div>
+            <div class="home-hero__social">
+              <a href="https://linkedin.com/in/victor-santos-37b954159" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
+                <img src="https://i.postimg.cc/VN801PCW/6bab3017350ca04c6fa05569672bd31e.jpg" class="home-hero__social-icon">
+              </a>
+            </div>
+            <div class="home-hero__social">
+              <a href="https://github.com/Victor-Sousa-hub" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
+                <img src="https://i.postimg.cc/wvGqts8r/github-6980894-960-720.webp" class="home-hero__social-icon">
+              </a>
+            </div>
+            <div class="home-hero__social">
+              <a href="#" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
+                <img src="https://i.postimg.cc/rmyd0Ggd/91a72ed3796a7fb3df485242aa5e3e1d.jpg" class="home-hero__social-icon">
+              </a>
+            </div>
+          </div>
+        </div>
+    </footer>
+    </div>
+
+</body>
+</html>
+</body>
+</html>
