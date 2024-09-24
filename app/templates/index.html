@@ -37,7 +37,7 @@
                     <a href="{{url_for('main.index')}}" class="header__link"> Home </a>
                 </li>
                 <li class="header__link-wrapper">
-                    <a href="#textos" class="header__link">Textos </a>
+                    <a href="#habilidades" class="header__link">Habilidades </a>
                 </li>
                 <li class="header__link-wrapper">
                     <a href="#projetos" class="header__link"> Projetos </a>
@@ -58,21 +58,74 @@
         
 
         <div class="home-hero__content">
-            <h1 class="heading-primary">Bem-vindo</h1>
+            <h1 class="heading-primary">Analista de dados</h1>
             
             <div class="home-hero__info">
-            <p class="text-primary">Entusiasta em tecnologia com experiência em análise 
-                        de dados e desenvolvimento de projetos web e Python. Atualmente, 
-                    estou explorando a tradução e a criação de projetos em diversas áreas.</p>
+            <p class="text-primary">Experiência em análise 
+                de dados e desenvolvimento de projetos com Python. Atualmente, 
+                                   estou autando em projetos de coleta e anlise de dados com machine learnig.</p>
             </div>
         
         
             <div class="home-hero__cta ">
-            <a href="{{ url_for('main.textos') }}" class="btn btn--bg">Textos</a>
-            <a href="{{ url_for('main.projetos') }}" class="btn btn--bg">Projetos</a>             
+            <a href="#habilidades" class="btn btn--bg">Habilidades</a>
+            <a href="#projetos" class="btn btn--bg">Projetos</a>             
             </div>
     </div>
 </section> 
+
+<section class="section-cards" id="habilidades">
+    <h1 class="title-grid">Principais Habilidades</h1>
+    <div class="section-cards-grid">
+        <div class="card">
+            <h2>Python</h2>
+        </div>
+
+        <div class="card">
+            <h2>TensorFlow</h2>
+        </div>
+        <div class="card">
+            <h2>Pandas</h2>
+        </div>
+
+        <div class="card">
+            <h2>BeautifulSoup</h2>
+        </div>
+
+        <div class="card">
+            <h2>dash</h2>
+        </div>
+
+        <div class="card">
+            <h2>matplotlib</h2>
+        </div>
+
+        <div class="card">
+            <h2>Jupyter</h2>
+        </div>
+
+        <div class="card">
+            <h2>SAS</h2>
+        </div>
+
+        <div class="card">
+            <h2>SQL</h2>
+        </div>
+
+        <div class="card">
+            <h2>Excel</h2>
+        </div>
+
+        <div class="card">
+            <h2>PowerBi</h2>
+        </div>
+
+        <div class="card">
+            <h2>StoryTelling</h2>
+        </div>
+    </div>
+</section>
+
 
 <section class="projects" id="projetos">
     {% block content %}
@@ -82,14 +135,9 @@
         
     </div>
 </section>
-    <div class="main-conteiner">
-        
-        <div id="textos">   {% include 'textos.html' %}</div>
-              
-    </div>
     {% endblock %}  
 
-</div>  
+
     
     <div>
     <footer class="footer">
