@@ -240,10 +240,9 @@ textarea {
     color: #ffffff00;
     background: linear-gradient(to right, #172137, #0F172A);
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     min-height: 80rem;
-    max-height: 120rem;
-    position: relative
+    position: relative;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -315,7 +314,7 @@ textarea {
 @media only screen and (max-width: 37.5em) {
     .home-hero__content {
         padding:19rem 0 13rem 0;
-        margin: auto;
+        margin: 50px;
         position: static;
         transform: translate(0, 0)
     }
@@ -606,7 +605,7 @@ figure:hover figcaption {
     text-shadow: 0 0 10px rgba(157, 127, 230, 0.7), 0 0 20px rgba(157, 127, 230, 0.5);
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 35px;
     font-size: 36px;
   }
 
@@ -614,7 +613,8 @@ figure:hover figcaption {
     color: #ffffff;
     background: linear-gradient(to right, #172137, #0F172A);
     background-position: center;
-    position: relative
+    position: relative;
+    padding: 80px;
 }
 
 .grid-link{
@@ -653,4 +653,53 @@ figure:hover figcaption {
     grid-template-rows: repeat(1, 0px);    /* 1 linhas */
     justify-content: center;
     z-index: 1;
+}
+
+
+.section-cards-grid{
+    display: grid;                   /* Ativa o grid */
+    grid-template-columns: repeat(4, 140px); /* Duas colunas de largura igual */
+    grid-template-rows: repeat(3, 50px);
+    justify-content: center;
+    align-items: center;
+    list-style:none;
+    position: relative;
+}
+
+.section-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    justify-content: center;
+    background: linear-gradient(to right, #172137, #0F172A);
+    
+    min-height: 55rem;
+    
+
+}
+
+.card {
+    background-color: #DCE6F2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100px; /* Largura menor */
+    height: 35px; /* Altura menor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 1.2em; /* Tamanho de fonte menor */
+    color: #333;
+    margin: 0;
+    text-align: center;
 }
